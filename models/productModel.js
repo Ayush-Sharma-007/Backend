@@ -9,4 +9,4 @@ const mySchema = new Schema({
     createdAt : { type : Date, default : Date.now }
 });
 
-module.exports = model('Users', mySchema); //user is a collection name   
+module.exports = model('Products', mySchema); //Product is a collection name   
