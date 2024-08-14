@@ -2,6 +2,7 @@ const { model, Schema } = require('../connection');
 
 const mySchema = new Schema({
     title : String,
+    category : { type : String, default : 'Unknown'},
     brand : { type : String },
     model : { type : String},
     price : {type : Number, required : true},
