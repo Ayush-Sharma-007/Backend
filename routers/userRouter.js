@@ -9,6 +9,13 @@ router.post('/add', (req, res) => {
     .then((result) => {
         res.status(200).json(result);
     }).catch((err) => {
+        console.log(err);
+        if(err.code === 11000){
+            res.status(500).json({message : 'Email already exists'})
+        }
+        else{
+            res.status(500).json(err)
+        }    
         res.status(500).json(err);
     });
 });
